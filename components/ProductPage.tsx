@@ -225,37 +225,6 @@ export default function ProductPage() {
             {/* Image gallery */}
             <Tab.Group as="div" className="flex flex-col-reverse">
               {/* Image selector */}
-              <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
-                <Tab.List className="grid grid-cols-4 gap-6">
-                  <Tab
-                    key={product.MIME_INFO.MIME[0].MIME_DESCR}
-                    className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
-                  >
-                    {({ selected }) => (
-                      <>
-                        <span className="sr-only">
-                          {" "}
-                          {product.MIME_INFO.MIME[0].MIME_DESCR}{" "}
-                        </span>
-                        <span className="absolute inset-0 overflow-hidden rounded-md">
-                          <img
-                            src={`/images/${product.MIME_INFO.MIME[0].MIME_SOURCE}`}
-                            alt=""
-                            className="h-full w-full object-cover object-center scale-90"
-                          />
-                        </span>
-                        <span
-                          className={classNames(
-                            selected ? "ring-indigo-500" : "ring-transparent",
-                            "pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2"
-                          )}
-                          aria-hidden="true"
-                        />
-                      </>
-                    )}
-                  </Tab>
-                </Tab.List>
-              </div>
 
               <Tab.Panels className="aspect-w-10 aspect-h-7 w-full lg:border lg:rounded-lg">
                 {product.images.map((image) => (
@@ -579,15 +548,6 @@ export default function ProductPage() {
                       </p>
                       <p className="mt-1 text-sm text-gray-500">
                         {product.number}
-                      </p>
-                    </div>
-                    <div className="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
-                      <div
-                        aria-hidden="true"
-                        className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t "
-                      />
-                      <p className=" text-lg font-semibold text-white">
-                        {product.price}
                       </p>
                     </div>
                   </div>

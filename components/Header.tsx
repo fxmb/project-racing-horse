@@ -22,7 +22,7 @@ const features = [
 
 export default function Header() {
   return (
-    <Popover className="relative bg-[#FEFBF5]">
+    <Popover className="relative bg-background">
       <div className="mx-auto max-w-7xl px-4 xl:px-0">
         <div className="flex items-center justify-between py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">

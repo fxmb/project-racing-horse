@@ -12,8 +12,8 @@ module.exports = {
         sans: ["Lato", ...fontFamily.sans],
       },
       colors: {
-        primary: "#F08057",
-        background: "#FEFBF5",
+        primary: "#4f46e5",
+        background: "#f8fafc",
       },
     },
   },
