@@ -32,7 +32,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 xl:px-0 py-12">
         <div className="xl:grid xl:grid-cols-12 xl:gap-8">
           <div className="space-y-8 xl:col-span-3">
-            <Image width={40} height={40} src={logo} alt="PuppyPals Logo" />
+            <Image
+              width={40}
+              height={40}
+              src={logo}
+              alt="Geparts Logo"
+              className="bg-white rounded-full p-1 shadow-xl shadow-indigo-500"
+            />
             <Paragraph className="text-base text-gray-300">
               Geparts - Der One-Stop Shop für Ersatzteile der Hydraulik &
               Pneumatik.
