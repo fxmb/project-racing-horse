@@ -1,16 +1,13 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
 
-
 const Home: NextPage = () => {
   return (
     <Layout
-      title="PuppyPals - alles zum Thema Hund & Hundeschulen"
-      desc="Bei PuppyPals triffst Du auf eine freundliche Hundecommunity. Wir beantworten alle Fragen zum Thema Hund und Hundeschulen"
+      title="Geparts - Pneumatik & Hydraulik Ersatzteile B2B Onlineshop"
+      desc="Sofort lieferbar über Nacht. Frei-Haus deutschlandweit. Technische Beratung."
     >
-      <div className="max-w-7xl mx-auto">
-        Project Racing Horse
-      </div>
+      <div className="max-w-7xl mx-auto">Project Racing Horse</div>
     </Layout>
   );
 };

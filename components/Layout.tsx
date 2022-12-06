@@ -47,7 +47,7 @@ export default function Layout({
           rel="canonical"
           href={`https://www.puppypals.de${router.asPath}`}
         />
-        <link rel="icon" href="/logo.ico" />
+        <link rel="icon" href="/horse-logo.ico" />
       </Head>
 
       <Header />

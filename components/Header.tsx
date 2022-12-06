@@ -8,16 +8,10 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/logo.png";
+import logo from "../public/horse-logo.svg";
 import Paragraph from "./htmlComponents/Paragraph";
 
 const features = [
-  {
-    name: "Hundeschulen",
-    href: "/hundeschule",
-    description: "Finde Hundeschulen in deiner Nähe",
-    icon: AcademicCapIcon,
-  },
   {
     name: "Über uns",
     href: "/ueber-uns",
@@ -33,12 +27,12 @@ export default function Header() {
         <div className="flex items-center justify-between py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/" className="flex items-center">
-              <span className="sr-only">PuppyPals</span>
+              <span className="sr-only">Geparts</span>
               <div className="mr-1.5">
-                <Image width={40} height={40} src={logo} alt="PuppyPals Logo" />
+                <Image width={40} height={40} src={logo} alt="Geparts Logo" />
               </div>
               <Paragraph className="text-xl font-black text-gray-700">
-                PuppyPals
+                Geparts
               </Paragraph>
             </Link>
           </div>
@@ -49,18 +43,15 @@ export default function Header() {
             </Popover.Button>
           </div>
           <nav className="hidden space-x-10 md:flex">
-            <Link
-              href="/hundeschule"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Hundeschulen
-            </Link>
-            <Link
-              href="/ueber-uns"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Über uns
-            </Link>
+            {features.map((section) => (
+              <Link
+                key={section.name}
+                href={section.href}
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                {section.name}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>
@@ -82,17 +73,17 @@ export default function Header() {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center">
-                  <span className="sr-only">PuppyPals</span>
+                  <span className="sr-only">Geparts</span>
                   <div className="mr-1.5">
                     <Image
                       width={40}
                       height={40}
                       src={logo}
-                      alt="PuppyPals Logo"
+                      alt="Geparts Logo"
                     />
                   </div>
                   <Paragraph className="text-xl font-black text-gray-700">
-                    PuppyPals
+                    Geparts
                   </Paragraph>
                 </Link>
                 <div className="-mr-2">
