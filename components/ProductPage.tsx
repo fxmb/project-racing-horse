@@ -201,10 +201,6 @@ const relatedProducts = [
   // More products...
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function ProductPage() {
   return (
     <div className="bg-white">
@@ -454,8 +450,10 @@ export default function ProductPage() {
                       Gewicht
                     </dt>
                     <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                      {product.PRODUCT_LOGISTIC_DETAILS.PRODUCT_DIMENSIONS
-                        .WEIGHT * 1000}
+                      {Number(
+                        product.PRODUCT_LOGISTIC_DETAILS.PRODUCT_DIMENSIONS
+                          .WEIGHT
+                      ) * 1000}
                       {""} g / Stk.
                     </dd>
                   </div>

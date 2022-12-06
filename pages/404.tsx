@@ -6,12 +6,7 @@ export default function Example() {
   return (
     <>
       <Layout>
-        <div
-          className="-mt-20 h-screen bg-cover bg-top sm:bg-top"
-          style={{
-            backgroundImage: `url(${dog.src})`,
-          }}
-        >
+        <div className="-mt-20 h-screen bg-cover bg-top sm:bg-top">
           <div className="mx-auto max-w-7xl px-4 py-24 md:py-24  text-center sm:px-6 sm:py-24 lg:px-8 lg:py-48">
             <Paragraph className="text-base font-semibold text-gray-900 text-opacity-50">
               🐾 404
