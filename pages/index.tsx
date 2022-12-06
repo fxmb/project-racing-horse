@@ -7,7 +7,7 @@ const Home: NextPage = () => {
       title="Geparts - Pneumatik & Hydraulik Ersatzteile B2B Onlineshop"
       desc="Sofort lieferbar über Nacht. Frei-Haus deutschlandweit. Technische Beratung."
     >
-      <div className="max-w-7xl mx-auto">Project Racing Horse</div>
+      <div className="mx-auto max-w-7xl px-4 xl:px-0">Project Racing Horse</div>
     </Layout>
   );
 };

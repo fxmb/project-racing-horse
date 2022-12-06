@@ -29,7 +29,7 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 xl:px-0 py-12">
         <div className="xl:grid xl:grid-cols-12 xl:gap-8">
           <div className="space-y-8 xl:col-span-3">
             <Image width={40} height={40} src={logo} alt="PuppyPals Logo" />
@@ -55,7 +55,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="xl:col-span-5" />
-          <div className="mt-12 grid grid-cols-2 gap-8 items-start xl:col-span-4 xl:mt-0">
+          <div className="mt-12 grid grid-cols-2 gap-8 items-start lg:justify-items-end xl:col-span-4 xl:mt-0 ">
             <div>
               <h3 className="text-base font-medium text-gray-900">Marken</h3>
               <ul role="list" className="mt-4 space-y-4">
