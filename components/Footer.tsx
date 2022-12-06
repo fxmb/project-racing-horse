@@ -25,7 +25,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="bg-gray-800" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -33,21 +33,21 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-12 xl:gap-8">
           <div className="space-y-8 xl:col-span-3">
             <Image width={40} height={40} src={logo} alt="PuppyPals Logo" />
-            <Paragraph className="text-base text-gray-500">
+            <Paragraph className="text-base text-gray-300">
               Geparts - Der One-Stop Shop für Ersatzteile der Hydraulik &
               Pneumatik.
             </Paragraph>
             <div className="mt-6 flex">
               <div className="flex-shrink-0">
                 <EnvelopeIcon
-                  className="h-6 w-6 text-gray-400"
+                  className="h-6 w-6 text-gray-300"
                   aria-hidden="true"
                 />
               </div>
-              <div className="ml-3 text-base text-gray-500">
+              <div className="ml-3 text-base text-gray-300">
                 <a
                   href="mailto:team@puppypals.de"
-                  className="text-base text-gray-500 hover:text-gray-900"
+                  className="text-base text-gray-300 hover:text-white"
                 >
                   team@geparts.de
                 </a>
@@ -57,7 +57,7 @@ export default function Footer() {
           <div className="xl:col-span-5" />
           <div className="mt-12 grid grid-cols-2 gap-8 items-start lg:justify-items-end xl:col-span-4 xl:mt-0 ">
             <div>
-              <h3 className="text-base font-medium text-gray-900">Marken</h3>
+              <h3 className="text-base font-medium text-white">Marken</h3>
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.city
                   .sort((a, b) => a.name.localeCompare(b.name))
@@ -65,7 +65,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
+                        className="text-base text-gray-300 hover:text-white"
                       >
                         {item.name}
                       </Link>
@@ -74,15 +74,13 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-base font-medium text-gray-900">
-                Rechtliches
-              </h3>
+              <h3 className="text-base font-medium text-white">Rechtliches</h3>
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.legal.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-base text-gray-500 hover:text-gray-900"
+                      className="text-base text-gray-300 hover:text-white"
                     >
                       {item.name}
                     </Link>
@@ -92,8 +90,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-200 pt-8">
-          <Paragraph className="text-base text-gray-400 xl:text-center">
+        <div className="mt-12 border-t border-gray-300 pt-8">
+          <Paragraph className="text-base text-gray-300 xl:text-center">
             &copy; {new Date().getFullYear()} Geparts, Inc. All rights reserved.
           </Paragraph>
         </div>
