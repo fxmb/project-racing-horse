@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.puppypals.de
+
+# Sitemaps
+Sitemap: https://www.puppypals.de/sitemap.xml
