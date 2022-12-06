@@ -381,8 +381,11 @@ export default function ProductPage() {
               </div>
               <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
                 <dl className="sm:divide-y sm:divide-gray-200">
-                  {product.PRODUCT_FEATURES[1].FEATURE?.map((feature) => (
-                    <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
+                  {product.PRODUCT_FEATURES[1].FEATURE?.map((feature, idx) => (
+                    <div
+                      key={idx}
+                      className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6"
+                    >
                       <dt className="text-sm font-medium text-gray-500">
                         {feature.FNAME}
                       </dt>
@@ -402,8 +405,11 @@ export default function ProductPage() {
                         className="divide-y divide-gray-200 rounded-md border border-gray-200"
                       >
                         {" "}
-                        {product.MIME_INFO.MIME.map((attachment) => (
-                          <li className="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                        {product.MIME_INFO.MIME.map((attachment, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-center justify-between py-3 pl-3 pr-4 text-sm"
+                          >
                             <div className="flex w-0 flex-1 items-center">
                               <PaperClipIcon
                                 className="h-5 w-5 flex-shrink-0 text-gray-400"
@@ -529,8 +535,8 @@ export default function ProductPage() {
             </h2>
 
             <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
-              {relatedProducts.map((product) => (
-                <div key={product.id}>
+              {relatedProducts.map((product, idx) => (
+                <div key={idx}>
                   <div className="">
                     <div className="aspect-h-12 aspect-w-18 w-full overflow-hidden rounded-lg border">
                       <img
