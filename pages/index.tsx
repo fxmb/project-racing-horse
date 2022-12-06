@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import HomepageHeroSection from "../components/HomepageHeroSection";
 import Layout from "../components/Layout";
+import Usps from "../components/Usps";
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
     >
       <div className="mx-auto max-w-7xl px-4 xl:px-0">
         <HomepageHeroSection />
+        <Usps />
       </div>
     </Layout>
   );

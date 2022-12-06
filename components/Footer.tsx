@@ -34,8 +34,8 @@ export default function Footer() {
           <div className="space-y-8 xl:col-span-3">
             <Image width={40} height={40} src={logo} alt="PuppyPals Logo" />
             <Paragraph className="text-base text-gray-500">
-              Geparts - Der One-Stop Shop für Ersatzteile der Pneumatik &
-              Hydraulik.
+              Geparts - Der One-Stop Shop für Ersatzteile der Hydraulik &
+              Pneumatik.
             </Paragraph>
             <div className="mt-6 flex">
               <div className="flex-shrink-0">
