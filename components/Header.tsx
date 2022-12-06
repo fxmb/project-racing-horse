@@ -5,11 +5,14 @@ import {
   AcademicCapIcon,
   XMarkIcon,
   FaceSmileIcon,
+  TruckIcon,
+  LightBulbIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/horse-logo.svg";
 import Paragraph from "./htmlComponents/Paragraph";
+import { ClockIcon } from "@heroicons/react/24/outline";
 
 const features = [
   {
@@ -25,7 +28,7 @@ export default function Header() {
     <Popover className="relative bg-background">
       <div className="mx-auto max-w-7xl px-4 xl:px-0">
         <div className="flex items-center justify-between py-4 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex justify-between items-center lg:w-0 lg:flex-1">
             <Link href="/" className="flex items-center">
               <span className="sr-only">Geparts</span>
               <div className="mr-1.5">
@@ -35,6 +38,38 @@ export default function Header() {
                 Geparts
               </Paragraph>
             </Link>
+            <div className="hidden md:flex items-center">
+              <ClockIcon className="text-primary h-9 w-9 stroke-2 mr-2" />
+              <div className="flex flex-col">
+                <span className="font-bold text-primary -mb-1 text-lg">
+                  Sofort
+                </span>
+                <span className="font-light text-primary">
+                  lieferbar über Nacht
+                </span>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center">
+              <TruckIcon className="text-primary h-9 w-9 stroke-2 mr-2" />
+              <div className="flex flex-col">
+                <span className="font-bold text-primary -mb-1 text-lg">
+                  Frei-Haus
+                </span>
+                <span className="font-light text-primary">deutschlandweit</span>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center">
+              <LightBulbIcon className="text-primary h-9 w-9 stroke-2 mr-2" />
+              <div className="flex flex-col">
+                <span className="font-bold text-primary -mb-1 text-lg">
+                  Technische Beratung
+                </span>
+                <span className="font-light text-primary">
+                  durch unsere Ingenieure
+                </span>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center">{""}</div>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-[#FEFBF5] p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
