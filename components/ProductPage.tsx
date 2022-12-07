@@ -231,7 +231,7 @@ export default function ProductPage() {
                       className="w-32 mt-5 ml-5"
                     />
                     <img
-                      src={`/images/${product.MIME_INFO.MIME[0].MIME_SOURCE}`}
+                      src={`https://res.cloudinary.com/do43c888y/festo/${product.MIME_INFO.MIME[0].MIME_SOURCE}`}
                       alt={`/images/${product.MIME_INFO.MIME[0].MIME_DESCR}`}
                       className="h-full w-full object-fit object-center sm:rounded-lg scale-75 -mt-5"
                     />
@@ -538,7 +538,7 @@ export default function ProductPage() {
                   <div className="">
                     <div className="aspect-h-12 aspect-w-18 w-full overflow-hidden rounded-lg border">
                       <img
-                        src={`https://res.cloudinary.com/dk1nunuyf/festo/${product.imageRef}.jpg`}
+                        src={`https://res.cloudinary.com/do43c888y/festo/${product.imageRef}.jpg`}
                         alt={product.imageAlt}
                         className="h-full w-full object-cover object-center scale-90"
                       />
