@@ -273,14 +273,22 @@ export default function ProductPage() {
 
                 <p className="text-sm tracking-tight text-gray-900 mt-2">
                   Fremdartikelnummer:{" "}
-                  {product.PRODUCT_DETAILS.MANUFACTURER_TYPE_DESCR}
+                  <span className="ml-1 inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    {product.PRODUCT_DETAILS.MANUFACTURER_TYPE_DESCR}
+                  </span>
                 </p>
                 <p className="text-sm tracking-tight text-gray-900 mt-2">
-                  GTIN: {product.SUPPLIER_PID[1]["#text"]}
+                  GTIN:
+                  <span className="ml-1 inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    {product.SUPPLIER_PID[1]["#text"]}
+                  </span>
                 </p>
                 <p className="text-sm tracking-tight text-gray-900 mt-2">
                   {product.PRODUCT_FEATURES[1].REFERENCE_FEATURE_GROUP_NAME}{" "}
-                  Produkt ID: {product.PRODUCT_DETAILS.MANUFACTURER_PID}
+                  Produkt ID:
+                  <span className="ml-1 inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                    {product.PRODUCT_DETAILS.MANUFACTURER_PID}
+                  </span>
                 </p>
               </div>
 
