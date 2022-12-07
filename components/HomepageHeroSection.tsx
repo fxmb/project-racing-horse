@@ -1,3 +1,5 @@
+import SearchItemsButton from "./SearchItemsButton";
+
 export default function HomepageHeroSection() {
   return (
     <div className="relative overflow-hidden ">
@@ -63,26 +65,8 @@ export default function HomepageHeroSection() {
                 Ihr Full-Liner von Qualitätsführern im Bereich der Fluidtechnik:
                 Hydraulik, Pneumatik, Verbindungstechnik.
               </p>
-              <div className="mt-8 sm:mx-auto sm:max-w-lg sm:text-center lg:mx-0 lg:text-left">
-                <form action="#" method="POST" className="mt-3 sm:flex">
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="block w-full rounded-md border-gray-300 py-3 text-base placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:flex-1"
-                    placeholder="Art.-Nr. / Suchbegriff"
-                  />
-                  <button
-                    type="submit"
-                    className="mt-3 w-full rounded-md border border-transparent bg-gray-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:inline-flex sm:w-auto sm:flex-shrink-0 sm:items-center"
-                  >
-                    Suchen
-                  </button>
-                </form>
-              </div>
+
+              <SearchItemsButton />
             </div>
             <div className="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center">
               <svg

@@ -1,2 +1,1 @@
-export * from "./CityLP";
-export * from "./School";
+export * from "./Product";
