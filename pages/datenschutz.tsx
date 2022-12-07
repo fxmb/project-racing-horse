@@ -15,12 +15,12 @@ const Datenschutz = () => {
           </div>
         </div>
         <p className="mb-4">
-          <p>Camarelle Ventures GmbH</p>
-          <p>Kollwitzstr. 80</p>
-          <p>10435 Berlin</p>
+          <p>Lippold GmbH</p>
+          <p>Rondenbarg 11 – 17</p>
+          <p>22525 Hamburg</p>
           <p>Deutschland</p>
-          <p>Maximilian Ast</p>
-          team@puppypals.de
+          <p>Johann Harms</p>
+          team@project-racing-horse.de
           <br />
         </p>
         <div className="ce_text privacy_item general_part3 block">

@@ -6,8 +6,8 @@ import Paragraph from "./htmlComponents/Paragraph";
 
 const navigation = {
   city: [
-    { name: "Festo", href: "/hundeschule-berlin" },
-    { name: "Bosch Rexroth", href: "/hundeschule-hamburg" },
+    { name: "Festo | Beispielsprodukt", href: "/pdp" },
+    { name: "Bosch Rexroth", href: "#" },
   ],
   legal: [
     { name: "Impressum", href: "/impressum" },
@@ -16,7 +16,7 @@ const navigation = {
   contact: [
     {
       name: "Email",
-      href: "mailto:team@puppypals.de",
+      href: "mailto:#",
       icon: EnvelopeIcon,
     },
   ],
@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
               <div className="ml-3 text-base text-gray-300">
                 <a
-                  href="mailto:team@puppypals.de"
+                  href="mailto:#"
                   className="text-base text-gray-300 hover:text-white"
                 >
                   team@geparts.de

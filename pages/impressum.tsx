@@ -4,32 +4,32 @@ const Impressum = () => {
   return (
     <Layout title="Impressum">
       <div>
-        <div className="flex flex-col mx-4 lg:mx-96 break-words	my-16">
+        <div className="flex flex-col mx-4 lg:mx-96 break-words	py-16">
           <h1 className="text-my-auto-abo-blue text-2xl my-4">Impressum</h1>
           <h2 id="m46">Diensteanbieter</h2>
-          <p>Camarelle Ventures GmbH</p>
-          <p>Kollwitzstr. 80</p>
-          <p>10435 Berlin</p>
+          <p>Lippold GmbH</p>
+          <p>Rondenbarg 11 – 17</p>
+          <p>22525 Hamburg</p>
           <p>Deutschland</p>
+
           <h2 id="m56">Kontaktmöglichkeiten</h2>
           <p>
-            E-Mail-Adresse:{" "}
-            <a href="mailto:team@puppypals.de">team@puppypals.de</a>
+            E-Mail-Adresse: <a href="mailto:#">team@project-racing-horse.de</a>
           </p>
           <h2 className="text-my-auto-abo-blue text-2xl my-4" id="m153">
             Vertretungsberechtigte
           </h2>
           <p className="font-bold">Vertretungsberechtigt</p>
-          <p>Maximilian Ast</p>
+          <p>Johann Harms</p>
           <br />
           <h2 id="m58" className="font-bold">
             Angaben zum Unternehmen
           </h2>
           <h2 id="m151">Register und Registernummer</h2>
-          <p>HRB 229884 B</p>
-          <p>Amtsgericht Charlottenburg (Berlin)</p>
+          <p>HRB Nr. 43445</p>
+          <p>Amtsgericht Hamburg</p>
           <h2>Umsatzsteuer-Identifikationsnummer</h2>
-          <p>USt-IdNr: DE343373975</p>
+          <p>USt-IdNr: DE 182416320</p>
           <h2 className="text-my-auto-abo-blue text-2xl my-4" id="m65">
             Haftungs- und Schutzrechtshinweise
           </h2>

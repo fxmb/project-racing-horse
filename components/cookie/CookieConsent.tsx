@@ -55,8 +55,8 @@ const CookieConsent = () => {
             <span className="text-3xl mr-2">🍪</span> Cookies gefällig?
           </Paragraph>
           <Paragraph className="font-medium">
-            PuppyPals benutzt Cookies, um Dir die bestmögliche Nutzererfahrung
-            zu bieten. Mehr dazu in unserer{" "}
+            Geparts benutzt Cookies, um Dir die bestmögliche Nutzererfahrung zu
+            bieten. Mehr dazu in unserer{" "}
             <span className="inline-block">
               <Link
                 href="/datenschutz"
