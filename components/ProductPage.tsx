@@ -198,6 +198,28 @@ const relatedProducts = [
     imageAlt: "tbd",
     price: "€1.54",
   },
+  {
+    id: 3,
+    name: "Kunststoffschlauch",
+    desc: "PUN-H-8X1,25-SW",
+    number: "197392",
+    imageRef: "22AP2834",
+    href: "#",
+    imageSrc: `#`,
+    imageAlt: "tbd",
+    price: "€1.54",
+  },
+  {
+    id: 4,
+    name: "Kunststoffschlauch",
+    desc: "PUN-H-8X1,25-TBL",
+    number: "8048691",
+    imageRef: "22AP2A33",
+    href: "#",
+    imageSrc: `#`,
+    imageAlt: "tbd",
+    price: "€1.54",
+  },
   // More products...
 ];
 
@@ -249,12 +271,16 @@ export default function ProductPage() {
               <div className="mt-3">
                 <h2 className="sr-only">Product information</h2>
 
-                <p className="text-lg tracking-tight text-red-500 mt-2">
-                  Artikelnummer: Tbd
-                </p>
-                <p className="text-md tracking-tight text-gray-900 mt-2">
+                <p className="text-sm tracking-tight text-gray-900 mt-2">
                   Fremdartikelnummer:{" "}
                   {product.PRODUCT_DETAILS.MANUFACTURER_TYPE_DESCR}
+                </p>
+                <p className="text-sm tracking-tight text-gray-900 mt-2">
+                  GTIN: {product.SUPPLIER_PID[1]["#text"]}
+                </p>
+                <p className="text-sm tracking-tight text-gray-900 mt-2">
+                  {product.PRODUCT_FEATURES[1].REFERENCE_FEATURE_GROUP_NAME}{" "}
+                  Produkt ID: {product.PRODUCT_DETAILS.MANUFACTURER_PID}
                 </p>
               </div>
 
