@@ -5,8 +5,8 @@ import Layout from "../components/Layout";
 const UeberUns: NextPage = () => {
   return (
     <Layout
-      title="Das PuppyPals Team"
-      desc="Das PuppyPals Team stellt sich vor "
+      title="Das Project Racing Horse Team"
+      desc="Das Project Racing Horse Team stellt sich vor "
     >
       <AboutUs />
     </Layout>

@@ -10,7 +10,7 @@ export default function Document() {
         />
         <script
           defer
-          data-domain="puppypals.de"
+          data-domain="tbd.de"
           src="https://plausible.io/js/plausible.js"
         />
       </Head>
