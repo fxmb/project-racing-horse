@@ -538,7 +538,7 @@ export default function ProductPage() {
                   <div className="">
                     <div className="aspect-h-12 aspect-w-18 w-full overflow-hidden rounded-lg border">
                       <img
-                        src={product.imageSrc}
+                        src={`https://res.cloudinary.com/dk1nunuyf/festo/${product.imageRef}.jpg`}
                         alt={product.imageAlt}
                         className="h-full w-full object-cover object-center scale-90"
                       />
