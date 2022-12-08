@@ -1,4 +1,5 @@
 import { HomeIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 import { ProductParents } from "../types/Product";
 
 export default function Breadcrumb({
@@ -14,13 +15,13 @@ export default function Breadcrumb({
       >
         <li className="flex">
           <div className="flex items-center">
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            <Link href="/" className="text-gray-400 hover:text-gray-500">
               <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
               <span className="sr-only">Home</span>
-            </a>
+            </Link>
           </div>
         </li>
-        {Object.keys(product_parents).forEach(function (key, index) {
+        {Object.entries(product_parents).map(([key, value]) => (
           <li key={key} className="flex">
             <div className="flex items-center">
               <svg
@@ -33,16 +34,16 @@ export default function Breadcrumb({
               >
                 <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
               </svg>
-              <a
-                href={`/${key}`}
+              <Link
+                href={`/#`}
                 className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
                 aria-current={key ? "page" : undefined}
               >
-                {key}
-              </a>
+                {value}
+              </Link>
             </div>
-          </li>;
-        })}
+          </li>
+        ))}
       </ol>
     </nav>
   );
