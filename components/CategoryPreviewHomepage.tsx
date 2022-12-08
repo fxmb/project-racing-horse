@@ -64,7 +64,7 @@ const categories = [
 export default function CategoryPreviewHomepage() {
   return (
     <div className="pt-12">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 lg:gap-x-8 lg:gap-y-16">
         {categories.map((category, idx) => (
           <Link href="#" key={idx} className="flex flex-col ">
             <div className=" bg-white flex items-center justify-center ">
