@@ -38,8 +38,8 @@ function Pdp({ product }: { product: Product }) {
   return (
     <>
       <Layout
-        title="Geparts - Pneumatik & Hydraulik Ersatzteile B2B Onlineshop"
-        desc="Sofort lieferbar über Nacht. Frei-Haus deutschlandweit. Technische Beratung."
+        title={`${product.product_features[1]?.reference_feature_group_name} ${product.product_details.description_short} | Flixpart | Hydraulik & Pneumatik`}
+        desc={`${product.product_features[1]?.reference_feature_group_name} ${product.supplier_pid[0]["#text"]}: ${product.product_parents.parent_1} -  Bestellen bis 21:00, Versand am gleichen Tag`}
       >
         <div className="mx-auto max-w-7xl px-4 xl:px-0">
           <ProductPage product={product} />

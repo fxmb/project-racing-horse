@@ -70,10 +70,6 @@ export default function ProductPage({ product }: { product: Product }) {
 
   return (
     <div className="bg-white">
-      <Head>
-        <title>{product.product_details.description_short}</title>
-      </Head>
-
       <main className="mx-auto max-w-7xl sm:px-6 sm:pt-16 lg:px-8">
         <div className="lg:-mt-4 mb-4 lg:mb-8">
           <Breadcrumb product_parents={product.product_parents} />
