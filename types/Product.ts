@@ -15,7 +15,7 @@ interface ProductDetails {
   description_long: string;
   manufacturer_pid: string;
   manufacturer_name: string;
-  manufacturer_interface_descr: string;
+  manufacturer_type_descr: string;
   delivery_time: string;
   keyword: string[];
   product_status: ProductStatus;
