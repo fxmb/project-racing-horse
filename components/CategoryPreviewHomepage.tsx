@@ -33,21 +33,21 @@ const categories = [
   },
   {
     name: "Leitungsverbinder",
-    numberOfArticles: "15170",
+    numberOfArticles: "15.170",
     href: "#",
     imageSrc:
       "https://www.landefeld.de/shop/media/kapitelbilder-startseite/1_leitungsverbinder.jpg",
   },
   {
     name: "Gewindefittings",
-    numberOfArticles: "2003",
+    numberOfArticles: "2.003",
     href: "#",
     imageSrc:
       "https://www.landefeld.de/shop/media/kapitelbilder-startseite/2_gewindefittings.jpg",
   },
   {
     name: "Kupplungen",
-    numberOfArticles: "2300",
+    numberOfArticles: "2.300",
     href: "#",
     imageSrc:
       "https://www.landefeld.de/shop/media/kapitelbilder-startseite/3_kupplungstechnik.jpg",
