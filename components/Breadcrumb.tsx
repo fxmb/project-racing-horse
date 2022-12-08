@@ -23,7 +23,7 @@ export default function Breadcrumb({
         </li>
         {Object.entries(product_parents).map(([key, value]) => (
           <li key={key} className="flex">
-            <div className="flex items-center w-fit">
+            <div className="flex items-center">
               <svg
                 className="h-full w-6 flex-shrink-0 text-gray-200"
                 viewBox="0 0 24 44"

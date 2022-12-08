@@ -102,7 +102,7 @@ export interface Product extends Hit<BaseHit> {
   product_order_details: ProductOrderDetails;
   product_price_details: ProductPriceDetails;
   mime_info: MimeInfo;
-  product_reference: ProductReference;
+  product_reference: ProductReference[];
   product_logistic_details: ProductLogisticDetails;
   product_parents: ProductParents;
   objectID: string;

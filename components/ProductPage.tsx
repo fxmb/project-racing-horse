@@ -375,54 +375,58 @@ export default function ProductPage({ product }: { product: Product }) {
             </div>
           </div>
 
-          <section
-            aria-labelledby="related-heading"
-            className="mt-10 border-t border-gray-200 py-16 px-4 sm:px-0"
-          >
-            <h2
-              id="related-heading"
-              className="text-xl font-bold text-gray-900"
+          {product?.product_reference ? (
+            <section
+              aria-labelledby="related-heading"
+              className="mt-10 border-t border-gray-200 py-16 px-4 sm:px-0"
             >
-              Finden Sie die das perfekte Zubehör, um Ihre Produktkonfiguration
-              zu vervollständigen
-            </h2>
+              <h2
+                id="related-heading"
+                className="text-xl font-bold text-gray-900"
+              >
+                Finden Sie die das perfekte Zubehör, um Ihre
+                Produktkonfiguration zu vervollständigen
+              </h2>
 
-            <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
-              {product?.product_reference?.map((product, idx) => (
-                <div key={idx}>
-                  <div className="">
-                    <div className="aspect-h-12 aspect-w-18 w-full overflow-hidden rounded-lg border">
-                      <img
-                        src={`https://res.cloudinary.com/do43c888y/festo/${product.imageRef}.jpg`}
-                        alt={product.imageAlt}
-                        className="h-full w-full object-cover object-center scale-90"
-                      />
+              <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+                {product.product_reference?.map((product, idx) => (
+                  <div key={idx}>
+                    <div className="">
+                      <div className="aspect-h-12 aspect-w-18 w-full overflow-hidden rounded-lg border">
+                        <img
+                          src={`https://res.cloudinary.com/do43c888y/festo/${product.imageRef}.jpg`}
+                          alt={product.imageAlt}
+                          className="h-full w-full object-cover object-center scale-90"
+                        />
+                      </div>
+                      <div className=" mt-4">
+                        <h3 className="text-sm font-medium text-gray-900">
+                          Produktname
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-500">
+                          Produktbeschreibung kurz
+                        </p>
+                        <p className="mt-1 text-sm text-gray-500">
+                          Produkt Nummber
+                        </p>
+                      </div>
                     </div>
-                    <div className=" mt-4">
-                      <h3 className="text-sm font-medium text-gray-900">
-                        {product.name}
-                      </h3>
-                      <p className="mt-1 text-sm text-gray-500">
-                        {product.desc}
-                      </p>
-                      <p className="mt-1 text-sm text-gray-500">
-                        {product.number}
-                      </p>
+                    <div className="mt-6">
+                      <a
+                        href="#"
+                        className=" flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
+                      >
+                        In den Warenkorb
+                        <span className="sr-only">, {product}</span>
+                      </a>
                     </div>
                   </div>
-                  <div className="mt-6">
-                    <a
-                      href={product.href}
-                      className=" flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
-                    >
-                      In den Warenkorb
-                      <span className="sr-only">, {product.name}</span>
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+          ) : (
+            ""
+          )}
         </div>
       </main>
     </div>
