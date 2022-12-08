@@ -10,18 +10,18 @@ export default function ProductHits(props: UseHitsProps) {
   return (
     <div className="absolute left-1/2 z-10 w-screen max-w-xl -translate-x-1/2 transform px-2 sm:px-0">
       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-        <div className="relative grid gap-6 bg-white px-4 py-6 sm:gap-8 sm:p-8">
+        <div className="relative grid gap-6 bg-white px-4 py-6 sm:gap-8 sm:px-6 sm:py-8">
           {hits.map((hit: any, idx) => (
             <Link
               key={idx}
               href="#"
-              className="flex items-center pr-2 bg-white shadow rounded hover:shadow-indigo-500 transition duration-150
+              className="flex items-center pr-2 bg-white shadow p-1 rounded hover:shadow-indigo-500 hover:shadow-md transition duration-150
            "
             >
               <img
                 src={`https://res.cloudinary.com/do43c888y/festo/${hit.mime_info.mime[0].mime_source}`}
                 alt=""
-                className="h-16 w-24 object-cover object-center mr-2"
+                className="h-16 w-24 object-cover object-center mr-3 md:mr-4"
               />
               <div className="grid grid-cols-6 w-full gap-x-3">
                 <div className="flex flex-col items-start col-span-4 md:col-span-3 ">
