@@ -1,14 +1,7 @@
 import { HomeIcon } from "@heroicons/react/20/solid";
+import { ProductParents } from "../types/Product";
 
-const pages = [
-  { name: "Festo - Pneumatik", href: "#", current: false },
-  { name: "Pneumatische Verbindungstechnik ", href: "#", current: false },
-  { name: "Verschraubungen ", href: "#", current: false },
-  { name: "Stecknippel-Verschraubungen ", href: "#", current: false },
-  { name: "C-P, N-P ", href: "#", current: true },
-];
-
-export default function Breadcrumb() {
+export default function Breadcrumb(product_parents: ProductParents) {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol
@@ -23,8 +16,8 @@ export default function Breadcrumb() {
             </a>
           </div>
         </li>
-        {pages.map((page) => (
-          <li key={page.name} className="flex">
+        {Object.keys(product_parents).forEach(function (key, index) {
+          <li key={key} className="flex">
             <div className="flex items-center">
               <svg
                 className="h-full w-6 flex-shrink-0 text-gray-200"
@@ -37,15 +30,15 @@ export default function Breadcrumb() {
                 <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
               </svg>
               <a
-                href={page.href}
+                href={`/${key}`}
                 className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
-                aria-current={page.current ? "page" : undefined}
+                aria-current={key ? "page" : undefined}
               >
-                {page.name}
+                {key}
               </a>
             </div>
-          </li>
-        ))}
+          </li>;
+        })}
       </ol>
     </nav>
   );

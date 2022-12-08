@@ -83,7 +83,7 @@ interface ProductLogisticDetails {
   product_dimensions: ProductDimensions;
 }
 
-interface ProductParents {
+export interface ProductParents {
   parent_1: string;
   parent_2: string;
   parent_3: string;
