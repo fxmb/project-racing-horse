@@ -18,7 +18,7 @@ const searchClient = algoliasearch(
 const Home: NextPage = () => {
   return (
     <Layout
-      title="Geparts - Pneumatik & Hydraulik Ersatzteile B2B Onlineshop"
+      title="Flixpart - Hydraulik & Pneumatik Ersatzteile Onlineshop"
       desc="Sofort lieferbar über Nacht. Frei-Haus deutschlandweit. Technische Beratung."
     >
       <div className="mx-auto max-w-7xl px-4 xl:px-0">
