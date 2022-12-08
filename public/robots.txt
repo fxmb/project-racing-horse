@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.puppypals.de
+Host: https://www.tbd.de
 
 # Sitemaps
-Sitemap: https://www.puppypals.de/sitemap.xml
+Sitemap: https://www.tbd.de/sitemap.xml
