@@ -21,6 +21,7 @@ import {
 import { StarIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
 import Breadcrumb from "./Breadcrumb";
+import { Product } from "../types";
 
 const product = {
   "@mode": "new",
@@ -201,7 +202,7 @@ const relatedProducts = [
   // More products...
 ];
 
-export default function ProductPage() {
+export default function ProductPage({ product }: { product: Product }) {
   return (
     <div className="bg-white">
       <Head>

@@ -9,7 +9,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths:
       data?.map((product) => ({ params: { product_id: product.slug } })) || [],
-    fallback: false, // can also be true or 'blocking'
+    fallback: "blocking",
   };
 };
 
@@ -34,7 +34,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 function Pdp({ product }: { product: Product }) {
-  console.log("PRODUCT", product);
   return (
     <>
       <Layout
@@ -42,7 +41,7 @@ function Pdp({ product }: { product: Product }) {
         desc="Sofort lieferbar über Nacht. Frei-Haus deutschlandweit. Technische Beratung."
       >
         <div className="mx-auto max-w-7xl px-4 xl:px-0">
-          <ProductPage />
+          <ProductPage product={product} />
         </div>
       </Layout>
     </>

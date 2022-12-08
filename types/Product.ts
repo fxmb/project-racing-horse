@@ -90,6 +90,10 @@ interface ProductParents {
   parent_4: string;
 }
 
+interface Meta {
+  slug: string;
+}
+
 export interface Product extends Hit<BaseHit> {
   "@mode": string;
   supplier_pid: SupplierPid[];
@@ -102,4 +106,5 @@ export interface Product extends Hit<BaseHit> {
   product_logistic_details: ProductLogisticDetails;
   product_parents: ProductParents;
   objectID: string;
+  meta: Meta;
 }
