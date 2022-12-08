@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { ProductHits, HomepageHeroSection, Layout, Usps } from "../components";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch } from "react-instantsearch-hooks-web";
+import CategoryPreviewHomepage from "../components/CategoryPreviewHomepage";
 
 const searchClient = algoliasearch(
   "C9W94GI98R",
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
           <HomepageHeroSection />
 
           <ProductHits />
+          <CategoryPreviewHomepage />
           <Usps />
         </InstantSearch>
       </div>

@@ -6,7 +6,8 @@ const categories = [
   {
     name: "Leitungsverbinder",
     href: "#",
-    imageSrc: "https://www.festo.com/media/pim/717/D15000100116717_264x198.jpg",
+    imageSrc:
+      "https://www.landefeld.de/shop/media/kapitelbilder-startseite/1_leitungsverbinder.jpg",
   },
   {
     name: "Productivity",
