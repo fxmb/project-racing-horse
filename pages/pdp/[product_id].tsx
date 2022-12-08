@@ -7,8 +7,7 @@ import { Product } from "../../types";
 export const getStaticPaths: GetStaticPaths = async () => {
   const { data, error } = await supabaseAdmin.from("products").select("slug");
   return {
-    paths:
-      data?.map((product) => ({ params: { product_id: product.slug } })) || [],
+    paths: [],
     fallback: "blocking",
   };
 };
@@ -22,6 +21,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   if (result.error || !result.data) {
     return {
       props: { product: undefined },
+      revalidate: 10, // In seconds
     };
   }
 
