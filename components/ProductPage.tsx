@@ -107,22 +107,26 @@ export default function ProductPage({ product }: { product: Product }) {
                 <h2 className="sr-only">Product information</h2>
 
                 <p className="text-md tracking-tight text-gray-900 mt-2">
-                  Fremdartikelnummer:{" "}
+                  {product.product_features[1]?.reference_feature_group_name
+                    ? `${product.product_features[1]?.reference_feature_group_name} Artikelbezeichnung`
+                    : "Herstellerartikelbezeichnung"}
                   <span className="ml-1 inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800">
                     {product.product_details.manufacturer_type_descr}
+                  </span>
+                </p>
+
+                <p className="text-md tracking-tight text-gray-900 mt-2">
+                  {product.product_features[1]?.reference_feature_group_name
+                    ? `${product.product_features[1]?.reference_feature_group_name} Artikelnummer`
+                    : "Herstellerartikelnummer"}
+                  <span className="ml-1 inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800">
+                    {product.supplier_pid[0]["#text"]}
                   </span>
                 </p>
                 <p className="text-md tracking-tight text-gray-900 mt-2">
                   GTIN:
                   <span className="ml-1 inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800">
                     {product.supplier_pid[1]["#text"]}
-                  </span>
-                </p>
-                <p className="text-md tracking-tight text-gray-900 mt-2">
-                  {product.product_features[1].reference_feature_group_name}{" "}
-                  Produkt ID:
-                  <span className="ml-1 inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800">
-                    {product.supplier_pid[0]["#text"]}
                   </span>
                 </p>
               </div>
