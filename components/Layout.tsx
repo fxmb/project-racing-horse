@@ -38,7 +38,7 @@ export default function Layout({
         />
         <meta
           property="og:image"
-          content={`${image ? image : "/puppypals-default-seo-image.webp"}`}
+          content={`${image ? image : "/flixpart-titelbild.webp"}`}
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
