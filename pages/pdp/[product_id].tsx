@@ -29,6 +29,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       product: result.data[0].data,
     },
+    revalidate: 10, // In seconds
   };
 };
 

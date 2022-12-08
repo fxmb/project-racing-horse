@@ -1,8 +1,5 @@
 import { useHits, UseHitsProps } from "react-instantsearch-hooks-web";
 import { Product } from "../types";
-import type { Hit, BaseHit } from "instantsearch.js/es/types";
-
-type x = Hit<BaseHit> & Product;
 
 export default function ProductHits(props: UseHitsProps) {
   const { hits } = useHits(props);
