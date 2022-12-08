@@ -61,7 +61,13 @@ export default function ProductPage({ product }: { product: Product }) {
   //     </div>
   //   </div>
   // );
-  console.log(product.product_reference);
+
+  const productRohsConform = product.product_features[1].feature.filter(
+    (feature) => {
+      return feature.fname === "Werkstoffhinweis";
+    }
+  );
+
   return (
     <div className="bg-white">
       <Head>
@@ -366,8 +372,13 @@ export default function ProductPage({ product }: { product: Product }) {
                     <dt className="text-sm font-medium text-gray-500">
                       RoHS konform
                     </dt>
-                    <dd className="mt-1 text-sm text-red-500 sm:col-span-2 sm:mt-0">
-                      Tbd
+                    <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                      {productRohsConform[0]?.fvalue === "RoHS konform" ||
+                      product.product_details.description_long.includes(
+                        "RoHS konform"
+                      )
+                        ? "Ja"
+                        : "Nein"}
                     </dd>
                   </div>
                 </dl>
