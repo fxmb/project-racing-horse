@@ -1,3 +1,4 @@
+import ProductHits from "./ProductHits";
 import SearchItemsButton from "./SearchItemsButton";
 
 export default function HomepageHeroSection() {
@@ -65,8 +66,6 @@ export default function HomepageHeroSection() {
                 Ihr Full-Liner von Qualitätsführern im Bereich der Fluidtechnik:
                 Hydraulik, Pneumatik, Verbindungstechnik.
               </p>
-
-              <SearchItemsButton />
             </div>
             <div className="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center">
               <svg

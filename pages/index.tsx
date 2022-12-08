@@ -1,5 +1,11 @@
 import type { NextPage } from "next";
-import { ProductHits, HomepageHeroSection, Layout, Usps } from "../components";
+import {
+  ProductHits,
+  HomepageHeroSection,
+  Layout,
+  Usps,
+  SearchItemsButton,
+} from "../components";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch } from "react-instantsearch-hooks-web";
 import CategoryPreviewHomepage from "../components/CategoryPreviewHomepage";
@@ -20,9 +26,10 @@ const Home: NextPage = () => {
           searchClient={searchClient}
           indexName="project-racing-horse"
         >
+          <SearchItemsButton />
+          <ProductHits />
           <HomepageHeroSection />
 
-          <ProductHits />
           <CategoryPreviewHomepage />
           <Usps />
         </InstantSearch>

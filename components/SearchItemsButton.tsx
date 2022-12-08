@@ -5,7 +5,7 @@ export default function SearchItemsButton(props: UseSearchBoxProps) {
   const { query, refine } = useSearchBox(props);
 
   return (
-    <div className="mt-8 sm:mx-auto sm:max-w-lg sm:text-center lg:mx-0 lg:text-left">
+    <div className="pt-8 overflow-auto w-full lg:max-w-xl mx-auto p-2 md:p-4">
       <form action="#" method="POST" className="mt-3 sm:flex">
         <label htmlFor="produktsuche" className="sr-only">
           Produktsuche
