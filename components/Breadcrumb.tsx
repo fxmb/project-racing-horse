@@ -1,7 +1,11 @@
 import { HomeIcon } from "@heroicons/react/20/solid";
 import { ProductParents } from "../types/Product";
 
-export default function Breadcrumb(product_parents: ProductParents) {
+export default function Breadcrumb({
+  product_parents,
+}: {
+  product_parents: ProductParents;
+}) {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol
