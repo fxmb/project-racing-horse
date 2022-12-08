@@ -2,18 +2,20 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
-  AcademicCapIcon,
   XMarkIcon,
   FaceSmileIcon,
   TruckIcon,
   LightBulbIcon,
+  ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/horse-logo.svg";
 import Paragraph from "./htmlComponents/Paragraph";
 import { ClockIcon } from "@heroicons/react/24/outline";
+import { useRecoilState } from "recoil";
 
+import { checkoutProductsList } from "../util/Recoil";
 const features = [
   {
     name: "Über uns",
@@ -24,6 +26,8 @@ const features = [
 ];
 
 export default function Header() {
+  const [checkoutProducts, setCheckoutProducts] =
+    useRecoilState(checkoutProductsList);
   return (
     <Popover className="relative bg-background">
       <div className="mx-auto max-w-7xl px-4 xl:px-0">
@@ -69,6 +73,18 @@ export default function Header() {
                 </span>
               </div>
             </div>
+
+            <Link href="/checkout">
+              <div className="hidden md:flex items-center">
+                <ShoppingBagIcon
+                  className="h-6 w-6 flex-shrink-0 text-indigo-400 group-hover:text-gray-500"
+                  aria-hidden="true"
+                />
+                <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                  {checkoutProducts?.length || 0}
+                </span>
+              </div>
+            </Link>
             <div className="hidden md:flex items-center">{""}</div>
           </div>
           <div className="-my-2 -mr-2 md:hidden">

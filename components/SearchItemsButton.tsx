@@ -3,7 +3,7 @@ import { useSearchBox, UseSearchBoxProps } from "react-instantsearch-hooks-web";
 
 export default function SearchItemsButton(props: UseSearchBoxProps) {
   const { query, refine } = useSearchBox(props);
-  console.log("QUERY", query);
+
   return (
     <div className="mt-8 sm:mx-auto sm:max-w-lg sm:text-center lg:mx-0 lg:text-left">
       <form action="#" method="POST" className="mt-3 sm:flex">

@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Layout from "../../components/Layout";
 import ProductPage from "../../components/ProductPage";
+import { useProductCheckoutContext } from "../../context/ProductCheckoutContext";
 import { supabaseAdmin } from "../../lib/supabaseAdmin";
 import { Product } from "../../types";
 

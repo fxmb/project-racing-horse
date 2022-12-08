@@ -22,188 +22,45 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import Head from "next/head";
 import Breadcrumb from "./Breadcrumb";
 import { Product } from "../types";
+import { useRecoilState } from "recoil";
 
-const product = {
-  "@mode": "new",
-  images: [
-    {
-      id: 1,
-      name: "Angled view",
-      src: "https://www.landefeld.de/shop/media/festo/produkte/d15000100118885.jpg",
-      alt: "Angled front view with bag zipped and handles upright.",
-    },
-    // More images...
-  ],
-  SUPPLIER_PID: [
-    {
-      "@type": "supplier_specific",
-      "#text": "2021",
-    },
-    {
-      "@type": "ean",
-      "#text": "4052568017866",
-    },
-  ],
-  PRODUCT_DETAILS: {
-    DESCRIPTION_SHORT: "C-1/8-P-6 Schlauchtülle",
-    DESCRIPTION_LONG:
-      "Schlauchtülle C-1/8-P-6 Nennweite=4 mm, Betriebsmedium=Druckluft nach ISO 8573-1:2010 [7:-:-], Hinweis zum Betriebs- und Steuermedium=Geölter Betrieb möglich (im weiteren Betrieb erforderlich), Pneumatischer Anschluss 1=Innengewinde G1/8, Pneumatischer Anschluss 2=für Schlauch Außendurchmesser 8 mm",
-    MANUFACTURER_PID: "2021",
-    MANUFACTURER_NAME: "Festo Vertrieb GmbH & Co. KG",
-    MANUFACTURER_TYPE_DESCR: "C-1/8-P-6",
-    DELIVERY_TIME: "21",
-    KEYWORD: ["C-1/8-P-6", "Schlauchtülle"],
-    PRODUCT_STATUS: {
-      "@type": "new",
-      "#text": "N",
-    },
-  },
-  PRODUCT_FEATURES: [
-    {
-      REFERENCE_FEATURE_SYSTEM_NAME: "ECLASS-9.0",
-      REFERENCE_FEATURE_GROUP_ID: "27294201",
-    },
-    {
-      REFERENCE_FEATURE_SYSTEM_NAME: "udf_Festo-2012.1",
-      REFERENCE_FEATURE_GROUP_NAME: "Festo",
-      FEATURE: [
-        {
-          FNAME: "Nennweite",
-          FVALUE: "4",
-          FUNIT: "mm",
-          FORDER: "30001",
-          FVALUE_TYPE: "SET",
-        },
-        {
-          FNAME: "Betriebsmedium",
-          FVALUE: "Druckluft nach ISO 8573-1:2010 [7:-:-]",
-          FORDER: "310035",
-          FVALUE_TYPE: "SET",
-        },
-        {
-          FNAME: "Hinweis zum Betriebs- und Steuermedium",
-          FVALUE: "Geölter Betrieb möglich (im weiteren Betrieb erforderlich)",
-          FORDER: "320003",
-          FVALUE_TYPE: "SET",
-        },
-        {
-          FNAME: "Pneumatischer Anschluss 1",
-          FVALUE: "Innengewinde G1/8",
-          FORDER: "490073",
-          FVALUE_TYPE: "SET",
-        },
-        {
-          FNAME: "Pneumatischer Anschluss 2",
-          FVALUE: "für Schlauch Außendurchmesser 8 mm",
-          FORDER: "500140",
-          FVALUE_TYPE: "SET",
-        },
-      ],
-    },
-  ],
-  PRODUCT_ORDER_DETAILS: {
-    ORDER_UNIT: "PCE",
-    CONTENT_UNIT: "PCE",
-    NO_CU_PER_OU: "1",
-    PRICE_QUANTITY: "1",
-    QUANTITY_MIN: "10",
-    QUANTITY_INTERVAL: "10",
-  },
-  PRODUCT_PRICE_DETAILS: {
-    PRODUCT_PRICE: {
-      "@price_type": "net_customer",
-      PRICE_AMOUNT: "6.53",
-      PRICE_CURRENCY: "EUR",
-      TAX: "0.19",
-      LOWER_BOUND: "10",
-    },
-  },
-  MIME_INFO: {
-    MIME: [
-      {
-        MIME_TYPE: "image/jpeg",
-        MIME_SOURCE: "22AP1CAD.jpg",
-        MIME_DESCR: "Produktbild",
-        MIME_ALT: "Produktbild",
-        MIME_PURPOSE: "normal",
-      },
-      {
-        MIME_TYPE: "text/html",
-        MIME_SOURCE: "00002021.html",
-        MIME_DESCR: "Datenblatt",
-        MIME_ALT: "Datenblatt",
-        MIME_PURPOSE: "data_sheet",
-      },
-      {
-        MIME_TYPE: "url",
-        MIME_SOURCE:
-          "https://www.festo.com/cat/de_de/xDKI.asp?PartNo=2021&writePDF=true&xR=DKI3WebDataSheetV1",
-        MIME_DESCR: "PDF-Datasheet Link",
-        MIME_ALT: "PDF-Datasheet Link",
-        MIME_PURPOSE: "data_sheet",
-      },
-      {
-        MIME_TYPE: "url",
-        MIME_SOURCE: "https://www.festo.com/catalogue/2021/",
-        MIME_DESCR: "Pneumatic Katalog",
-        MIME_ALT: "Pneumatic Katalog",
-        MIME_PURPOSE: "others",
-      },
-    ],
-  },
-  PRODUCT_REFERENCE: [
-    {
-      "@type": "accessories",
-      PROD_ID_TO: "197378",
-    },
-    {
-      "@type": "accessories",
-      PROD_ID_TO: "197385",
-    },
-    {
-      "@type": "accessories",
-      PROD_ID_TO: "197392",
-    },
-    {
-      "@type": "accessories",
-      PROD_ID_TO: "8048691",
-    },
-  ],
-  PRODUCT_LOGISTIC_DETAILS: {
-    COUNTRY_OF_ORIGIN: "IT",
-    PRODUCT_DIMENSIONS: {
-      WEIGHT: "0.014",
-    },
-  },
-};
-const relatedProducts = [
-  {
-    id: 1,
-    name: "Kunststoffschlauch",
-    desc: "PUN-H-8X1,25-NT",
-    number: "197378",
-    imageRef: "22AP0B24",
-    href: "#",
-    imageSrc: `/images/22AP0B24.jpg`,
-    imageAlt: "tbd",
-    price: "€1.54",
-  },
-  {
-    id: 2,
-    name: "Kunststoffschlauch",
-    desc: "PUN-H-8X1,25-BL",
-    number: "197385",
-    imageRef: "22AP08A7",
-    href: "#",
-    imageSrc: `/images/22AP08A7.jpg`,
-    imageAlt: "tbd",
-    price: "€1.54",
-  },
-  // More products...
-];
+import { checkoutProductsList } from "../util/Recoil";
 
 export default function ProductPage({ product }: { product: Product }) {
-  return <div></div>;
+  const [checkoutProducts, setCheckoutProducts] =
+    useRecoilState(checkoutProductsList);
+
+  const addProductToCheckout = () => {
+    const isProductAlreadyAdded = checkoutProducts.some(
+      (checkedProduct: Product) => {
+        return checkedProduct.objectID === product.objectID;
+      }
+    );
+    isProductAlreadyAdded
+      ? null
+      : setCheckoutProducts([...checkoutProducts, product]);
+  };
+
+  return (
+    <div>
+      <div className="mt-10 flex">
+        <button
+          onClick={addProductToCheckout}
+          className="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+        >
+          In den Warenkorb
+        </button>
+
+        <button
+          type="button"
+          className="ml-4 flex items-center justify-center rounded-md py-3 px-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500"
+        >
+          <HeartIcon className="h-6 w-6 flex-shrink-0" aria-hidden="true" />
+          <span className="sr-only">Add to favorites</span>
+        </button>
+      </div>
+    </div>
+  );
   // return (
   //   <div className="bg-white">
   //     <Head>
