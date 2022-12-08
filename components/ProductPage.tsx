@@ -61,7 +61,7 @@ export default function ProductPage({ product }: { product: Product }) {
   //     </div>
   //   </div>
   // );
-  console.log(product.product_parents);
+  console.log(product.product_reference);
   return (
     <div className="bg-white">
       <Head>
@@ -389,13 +389,13 @@ export default function ProductPage({ product }: { product: Product }) {
               </h2>
 
               <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
-                {product.product_reference?.map((product, idx) => (
+                {product.product_reference.map((product, idx) => (
                   <div key={idx}>
                     <div className="">
                       <div className="aspect-h-12 aspect-w-18 w-full overflow-hidden rounded-lg border">
                         <img
-                          src={`https://res.cloudinary.com/do43c888y/festo/${product.imageRef}.jpg`}
-                          alt={product.imageAlt}
+                          src={`https://res.cloudinary.com/do43c888y/festo/${product.prod_id_to}.jpg`}
+                          alt={product.prod_id_to}
                           className="h-full w-full object-cover object-center scale-90"
                         />
                       </div>
@@ -417,7 +417,7 @@ export default function ProductPage({ product }: { product: Product }) {
                         className=" flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
                       >
                         In den Warenkorb
-                        <span className="sr-only">, {product}</span>
+                        <span className="sr-only">, {product.prod_id_to}</span>
                       </a>
                     </div>
                   </div>
